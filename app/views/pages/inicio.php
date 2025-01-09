@@ -10,10 +10,10 @@
 				<div class="card-body">
 					<h5 class="card-title">Configuración</h5>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item"><a href="<?php echo URL_HOST ?>/usuarios">Usuarios</a></li>
-						<li class="list-group-item"><a href="<?php echo URL_HOST ?>/Empresas">Propietarios</a></li>
-						<li class="list-group-item"><a href="<?php echo URL_HOST ?>/Ciudades">Ciudades</a></li>
-						<li class="list-group-item"><a href="<?php echo URL_HOST ?>/Barrios">Barrios</a></li>
+						<li class="list-group-item"><a href="<?php echo URL_HOST ?>Usuarios">Usuarios</a></li>
+						<li class="list-group-item"><a href="<?php echo URL_HOST ?>Empresas">Propietarios</a></li>
+						<li class="list-group-item"><a href="<?php echo URL_HOST ?>Ciudades">Ciudades</a></li>
+						<li class="list-group-item"><a href="<?php echo URL_HOST ?>Barrios">Barrios</a></li>
 					</ul>
 				</div>
 			</div>

@@ -56,6 +56,24 @@ class Usuarios extends Controlador{
 		}
 	}
 
+	public function editarEstado($id){
+		$usuario = $this->modelo('Usuario')->buscarUsuario($id);
+		if ($usuario['estado'] == 'Activo') {
+			$usuario['estado'] = 'Inactivo';
+		}else {
+			$usuario['estado'] = 'Activo';
+		}
+		$datos = ['id' => $id, 'estado' => $usuario['estado']];
+		$respuesta = $this->modelo('Usuario')->editarUsuario($datos);
+		if ($respuesta == 'Exito') {
+			$usuarios = $this->modelo('Usuario')->listarUsuarios();
+			$this->vista('Pages/usuarios/vistaUsuarios', $usuarios);
+		}else {
+			$error = ['error' => 'Error al guardar datos en la base de datos'];
+			$this->vista('Pages/usuarios/agregar_usuario', $error);
+		}
+	}
+
 	public function eliminarUsuario($id){
 		$respuesta = $this->modelo('Usuario')->eliminarUsuario($id);
 		if ($respuesta == 'Exito') {

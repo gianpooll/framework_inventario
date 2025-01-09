@@ -31,9 +31,9 @@
 									<td><?php echo $usuario->usuario; ?></td>
 									<td>
 										<?php if ($usuario->estado == 'Activo') { ?>
-											<h5><span class="badge bg-success"><?php echo $usuario->estado; ?></span></h5>
+											<a href="<?php echo URL_HOST . "usuarios/editarEstado/" . $usuario->usuario_id ?>"><h5><span class="badge bg-success"><?php echo $usuario->estado; ?></span></h5></a>
 										<?php }else { ?>
-											<h5><span class="badge bg-danger"><?php echo $usuario->estado; ?></span></h5>
+											<a href="<?php echo URL_HOST . "usuarios/editarEstado/" . $usuario->usuario_id ?>"><h5><span class="badge bg-danger"><?php echo $usuario->estado; ?></span></h5></a>
 										<?php } ?>
 										
 									</td>

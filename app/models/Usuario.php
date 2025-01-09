@@ -71,6 +71,21 @@ class Usuario extends DataBase {
 		}
 	}
 
+	public function editarEstado($datos){
+		$id = $datos['id'];
+		$est = $datos['estado'];
+		$sql = "UPDATE usuarios SET estado = :est WHERE usuario_id = :id";
+		$consulta = $this->db->prepare($sql);
+		$consulta->bindParam(':est', $est);
+		$consulta->bindParam(':id', $id);
+		$resultado = $consulta->execute();
+		if ($resultado) {
+			return 'Exito';
+		}else{
+			return 'Error';
+		}
+	}
+
 	public function eliminarUsuario($id){
 		$sql = "DELETE FROM usuarios WHERE usuario_id = :id";
 		$consulta = $this->db->prepare($sql);
